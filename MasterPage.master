@@ -1,0 +1,103 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="~/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/txt_centro.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/south-street/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <style type="text/css">
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            overflow: auto;
+        }
+
+        .Estilo2 {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .Estilo5 {
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .Estilo6 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <input type="hidden" id="TituloPagina" value="" runat="server" />
+        <input type="hidden" id="UrlPagina" value="" runat="server" />
+        <div class="page">
+            <div class="header">
+                <div>
+                    <table width="100%" height="10" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="10" background="<%=Page.ResolveUrl("~/imagenes/fondo-header.jpg")%>">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" height="10">
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="33" bgcolor="#CFCFCF">
+                                <table width="100%" height="30" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="30">
+                                            <table width="100%" height="30" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td width="12" height="30">
+                                                        <img src="<%=Page.ResolveUrl("~/imagenes/before.png")%>" width="12" height="32" /></td>
+                                                    <td width="200" align="center" bgcolor="#FFFFFF"><span class="Estilo5" id="TituloAPL" runat="server">&nbsp;</span></td>
+                                                    <td width="12">
+                                                        <img src="<%=Page.ResolveUrl("~/imagenes/After.png")%>" width="30" height="32" /></td>
+                                                    <td height="30">&nbsp;</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td height="25" align="right" width="110" nowrap>
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" height="25">
+                                                <tr>
+                                                    <td width="20px" align="left">
+                                                        <img src="<%=Page.ResolveUrl("~/imagenes/usuario.png")%>" width="16" height="16" /></td>
+                                                    <td width="49%" class="Estilo2" id="CuentaUsuario" runat="server" nowrap>12345678-9</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clear hideSkiplink">
+                </div>
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </form>
+</body>
+</html>
